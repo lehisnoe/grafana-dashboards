@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1582186163325,
+  "iteration": 1582267375613,
   "links": [],
   "panels": [
     {
@@ -58,7 +58,7 @@
       "seriesOverrides": [
         {
           "alias": "SUCCESS",
-          "yaxis": 1
+          "yaxis": 2
         }
       ],
       "spaceLength": 10,
@@ -382,7 +382,7 @@
         {
           "format": "short",
           "label": null,
-          "logBase": 32,
+          "logBase": 1,
           "max": null,
           "min": null,
           "show": true
@@ -438,7 +438,12 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "seriesOverrides": [],
+      "seriesOverrides": [
+        {
+          "alias": "A",
+          "yaxis": 2
+        }
+      ],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
@@ -1201,7 +1206,7 @@
         {
           "format": "short",
           "label": null,
-          "logBase": 2,
+          "logBase": 1,
           "max": null,
           "min": null,
           "show": true
@@ -2264,7 +2269,6 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
           "tags": [],
           "text": "193.106.68.2",
           "value": "193.106.68.2"
@@ -2291,7 +2295,7 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
@@ -2311,5 +2315,5 @@
   "timezone": "",
   "title": "DNS",
   "uid": "rLrjMlJZk11",
-  "version": 44
+  "version": 47
 }
