@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 2,
-  "iteration": 1582023438389,
+  "iteration": 1582269787087,
   "links": [],
   "panels": [
     {
@@ -29,6 +29,7 @@
         "#d44a3a"
       ],
       "datasource": "InfluxDB-telegraf",
+      "decimals": 1,
       "format": "s",
       "gauge": {
         "maxValue": 100,
@@ -2876,7 +2877,7 @@
         ],
         "query": "SHOW TAG VALUES FROM \"sip\" WITH KEY = \"host\"",
         "refresh": 0,
-        "regex": "",
+        "regex": "/^gt-sip[7]{0,1}$/",
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
@@ -2888,7 +2889,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
@@ -2908,5 +2909,5 @@
   "timezone": "",
   "title": "Kamailio metrics",
   "uid": "NnaVsrPWk",
-  "version": 53
+  "version": 55
 }
