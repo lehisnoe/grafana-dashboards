@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 2,
-  "iteration": 1582269787087,
+  "iteration": 1582798333250,
   "links": [],
   "panels": [
     {
@@ -681,7 +681,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -727,8 +727,10 @@
                 "type": "mean"
               },
               {
-                "params": [],
-                "type": "difference"
+                "params": [
+                  "10s"
+                ],
+                "type": "non_negative_derivative"
               }
             ]
           ],
@@ -1322,7 +1324,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1369,7 +1371,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1416,7 +1418,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1463,7 +1465,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1510,7 +1512,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1557,7 +1559,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1604,7 +1606,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1733,7 +1735,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1780,7 +1782,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -1826,8 +1828,10 @@
                 "type": "mean"
               },
               {
-                "params": [],
-                "type": "difference"
+                "params": [
+                  "10s"
+                ],
+                "type": "non_negative_derivative"
               }
             ]
           ],
@@ -2283,7 +2287,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2330,7 +2334,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2377,7 +2381,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2424,7 +2428,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2471,7 +2475,54 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        },
+        {
+          "alias": "4xx",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "sip",
+          "orderByTime": "ASC",
+          "policy": "autogen",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "4xx_replies"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [],
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2502,7 +2553,7 @@
           "measurement": "sip",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "refId": "F",
+          "refId": "G",
           "resultFormat": "time_series",
           "select": [
             [
@@ -2518,7 +2569,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2549,7 +2600,7 @@
           "measurement": "sip",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "refId": "G",
+          "refId": "H",
           "resultFormat": "time_series",
           "select": [
             [
@@ -2565,7 +2616,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2654,7 +2705,12 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "seriesOverrides": [],
+      "seriesOverrides": [
+        {
+          "alias": "rcv",
+          "yaxis": 2
+        }
+      ],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
@@ -2670,7 +2726,7 @@
             },
             {
               "params": [
-                "linear"
+                "null"
               ],
               "type": "fill"
             }
@@ -2694,7 +2750,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2717,7 +2773,7 @@
             },
             {
               "params": [
-                "linear"
+                "null"
               ],
               "type": "fill"
             }
@@ -2741,7 +2797,7 @@
               },
               {
                 "params": [],
-                "type": "difference"
+                "type": "non_negative_difference"
               }
             ]
           ],
@@ -2764,7 +2820,7 @@
             },
             {
               "params": [
-                "linear"
+                "null"
               ],
               "type": "fill"
             }
@@ -2787,8 +2843,10 @@
                 "type": "mean"
               },
               {
-                "params": [],
-                "type": "difference"
+                "params": [
+                  "10s"
+                ],
+                "type": "non_negative_derivative"
               }
             ]
           ],
@@ -2853,8 +2911,8 @@
         "allValue": null,
         "current": {
           "tags": [],
-          "text": "gt-sip7",
-          "value": "gt-sip7"
+          "text": "gt-sip",
+          "value": "gt-sip"
         },
         "datasource": "InfluxDB-telegraf",
         "definition": "SHOW TAG VALUES FROM \"sip\" WITH KEY = \"host\"",
@@ -2865,12 +2923,12 @@
         "name": "host",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "gt-sip",
             "value": "gt-sip"
           },
           {
-            "selected": true,
+            "selected": false,
             "text": "gt-sip7",
             "value": "gt-sip7"
           }
@@ -2909,5 +2967,5 @@
   "timezone": "",
   "title": "Kamailio metrics",
   "uid": "NnaVsrPWk",
-  "version": 55
+  "version": 65
 }
